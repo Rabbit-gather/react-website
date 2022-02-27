@@ -1,6 +1,7 @@
 import React, {ReactNode, useState} from "react";
 import logo from "../assets/logo.svg";
 import ButtonGroup from "../components/ButtonGroup";
+import Typewriter from 'typewriter-effect';
 
 function Lobby()
 {
@@ -23,14 +24,25 @@ function Lobby()
         },
     ]
 
-    return <div className="App">
-        <header className="App-header">
-            <img height="400vh" src={logo} className="App-logo" alt="logo" />
-            <p><h1>兔給得資訊公司</h1></p>
-            <div className="px-5 py-4">
-                <ButtonGroup navButtons={json}/>
-            </div>
-        </header>
+    return <div className="justify-self-auto">
+        <div className="flex justify-center">
+            <img src={logo} alt="logo" style={{ height: "60vh"}} />
+        </div>
+
+        <div className="px-5 py-4">
+            <Typewriter
+                options={{
+                    wrapperClassName: `Typewriter__wrapper text-7xl`,
+                    cursorClassName: `Typewriter__cursor text-7xl`,
+                    strings: '兔給得資訊公司',
+                    autoStart: true,
+                }}
+            />
+        </div>
+
+        <div className="px-5 py-4">
+            <ButtonGroup navButtons={json}/>
+        </div>
     </div>
 }
 
