@@ -1,4 +1,4 @@
 interface Link {
     text: string;
-    href: string;
+    onClick?: React.MouseEventHandler<HTMLDivElement>;
 }

@@ -35,7 +35,7 @@ function Button({ children, ...others }: { children?: ReactNode } & any) {
         onMouseLeave={()=>setMouseIn(false)}
     >
         <ButtonWrapper>
-            {mouseIn? '>' : ' '} {children}
+            {mouseIn? '>' : ''} {children}
         </ButtonWrapper></div>;
 }
 

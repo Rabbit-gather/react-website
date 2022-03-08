@@ -1,27 +1,31 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import logo from '../assets/logo.svg';
 import ButtonGroup from '../components/ButtonGroup';
 
-function LobbyPage() {
-    let json: Array<Link> = [
+export default React.memo(props => {
+    const navigate = useNavigate();
+
+    const links: Array<Link> = [
         {
-            href: '',
             text: '個人服務',
         },
         {
-            href: '',
+            onClick: () => goToPage('/service'),
             text: '公司服務',
         },
         {
-            href: '',
             text: '部落格',
         },
         {
-            href: '',
             text: '關於我們',
         },
     ];
+
+    function goToPage(pathname: string) {
+        navigate({ pathname });
+    }
 
     return <div className="justify-self-auto">
         <div className="flex justify-center">
@@ -40,9 +44,7 @@ function LobbyPage() {
         </div>
 
         <div className="px-5 py-4">
-            <ButtonGroup navButtons={json}/>
+            <ButtonGroup links={links}/>
         </div>
     </div>;
-}
-
-export default LobbyPage;
+});

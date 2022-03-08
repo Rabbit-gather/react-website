@@ -2,17 +2,17 @@ import React from 'react';
 import Button from './Button';
 
 interface ButtonGroupProps {
-    navButtons?: Array<Link>;
+    links?: Array<Link>;
 }
 
 export default function ButtonGroup(
     {
-        navButtons = [],
+        links = [],
     } : ButtonGroupProps,
 ) {
     return <div className={'flex justify-center'}>
-        {navButtons.map((link, i) =>
-            <Button key={i} className="m-2">
+        {links.map((link, i) =>
+            <Button key={i} className="m-2" onClick={link.onClick}>
                 {link.text}
             </Button>,
         )}
