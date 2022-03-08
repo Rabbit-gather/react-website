@@ -1,5 +1,5 @@
-import React, {ReactChildren, ReactNode, useState} from "react";
-import styled from "styled-components";
+import React, { ReactNode, useState } from 'react';
+import styled from 'styled-components';
 
 const ButtonWrapper = styled.button`
   font-size: 23px;
@@ -25,7 +25,7 @@ const ButtonWrapper = styled.button`
   &:focus {
     outline: none;
   }
-`
+`;
 
 function Button({ children, ...others }: { children?: ReactNode } & any) {
     const [mouseIn, setMouseIn] = useState(false);
@@ -33,9 +33,10 @@ function Button({ children, ...others }: { children?: ReactNode } & any) {
         {...others}
         onMouseEnter={()=>setMouseIn(true)}
         onMouseLeave={()=>setMouseIn(false)}
-    ><ButtonWrapper>
-        {mouseIn? '>' : " "} {children}  
-    </ButtonWrapper></div>
+    >
+        <ButtonWrapper>
+            {mouseIn? '>' : ' '} {children}
+        </ButtonWrapper></div>;
 }
 
 export default Button;
