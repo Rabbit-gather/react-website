@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 import ButtonGroup from "../components/ButtonGroup";
 import Typewriter from 'typewriter-effect';
 
-function Lobby()
+function LobbyPage()
 {
     let json: Array<Link> = [
         {
@@ -46,4 +46,4 @@ function Lobby()
     </div>
 }
 
-export default Lobby;
+export default LobbyPage;

@@ -1,9 +1,9 @@
 import './App.scss';
-import Lobby from "./scenes/Lobby";
+import LobbyPage from "./pages/LobbyPage";
 import React, {ReactNode} from "react";
 
 function App() {
-    return <Lobby/>
+    return <LobbyPage/>
 }
 
 export default App;
