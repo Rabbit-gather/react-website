@@ -6,22 +6,22 @@ export default function ButtonGroup() {
         <Row>
             <Col md={3} sm={12}>
                 <div className="d-grid m-2">
-                    <Button className="nav-button" size="lg">個人服務</Button>
+                    <Button className="nav-button glitch-style-1" size="lg">個人服務</Button>
                 </div>
             </Col>
             <Col md={3} sm={12}>
                 <div className="d-grid m-2">
-                    <Button className="nav-button" size="lg">公司服務</Button>
+                    <Button className="nav-button glitch-style-2" size="lg">公司服務</Button>
                 </div>
             </Col>
             <Col md={3} sm={12}>
                 <div className="d-grid m-2">
-                    <Button className="nav-button" size="lg">部落格</Button>
+                    <Button className="nav-button glitch-style-3" size="lg">部落格</Button>
                 </div>
             </Col>
             <Col md={3} sm={12}>
                 <div className="d-grid m-2">
-                    <Button className="nav-button" size="lg">關於我們</Button>
+                    <Button className="nav-button glitch-style-4" size="lg">關於我們</Button>
                 </div>
             </Col>
         </Row>
